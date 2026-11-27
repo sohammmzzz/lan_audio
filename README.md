@@ -12,7 +12,7 @@
   <a href="https://pypi.org/project/lanaudio/"><img src="https://img.shields.io/pypi/pyversions/lanaudio?color=3ef2ff" alt="Python versions"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-a06cff" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/audio-24--bit%20lossless-39ff14" alt="24-bit lossless">
-  <a href="https://github.com/YOUR-GITHUB-USER/lan_audio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd166" alt="MIT license"></a>
+  <a href="https://github.com/sohammmzzz/lan_audio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd166" alt="MIT license"></a>
 </p>
 
 ---
@@ -71,32 +71,32 @@ lanaudio join office
 ### The agent (`lanaudio serve`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/serve.png" alt="lanaudio serve: animated agent screen" width="820">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/serve.png" alt="lanaudio serve: animated agent screen" width="820">
 </p>
 
 ### Host dashboard (`lanaudio room start office`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/host.png" alt="Host dashboard with members, headroom, gaps and a knock request" width="820">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/host.png" alt="Host dashboard with members, headroom, gaps and a knock request" width="820">
 </p>
 
 ### Listener dashboard (`lanaudio join office`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/listen.png" alt="Listener dashboard with buffer, sync and devices" width="820">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/listen.png" alt="Listener dashboard with buffer, sync and devices" width="820">
 </p>
 
 ### Passes and groups
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/token.png" alt="A member pass created by group add" width="720"><br><br>
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/groups.png" alt="lanaudio groups: which groups you are in and which are live" width="720">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/token.png" alt="A member pass created by group add" width="720"><br><br>
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/groups.png" alt="lanaudio groups: which groups you are in and which are live" width="720">
 </p>
 
 ### Diagnostics (`lanaudio doctor`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/doctor.png" alt="lanaudio doctor checklist with fixes" width="820">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/doctor.png" alt="lanaudio doctor checklist with fixes" width="820">
 </p>
 
 ## Requirements
@@ -570,6 +570,6 @@ No. The host's speakers play live; only members are delayed by the buffer.
 
 ## License
 
-MIT. See [LICENSE](https://github.com/YOUR-GITHUB-USER/lan_audio/blob/main/LICENSE).
+MIT. See [LICENSE](https://github.com/sohammmzzz/lan_audio/blob/main/LICENSE).
 
 <p align="center"><i>Lossless audio, flawless attitude.</i></p>
