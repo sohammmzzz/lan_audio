@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sohammmzzz/lan-audio/main/docs/banner.png" alt="LAN-AUDIO" width="640">
+  <img src="https://raw.githubusercontent.com/sohammmzzz/lan_audio/main/docs/banner.png" alt="lan_audio" width="640">
 </p>
 
 <p align="center">
@@ -12,14 +12,14 @@
   <a href="https://pypi.org/project/lanaudio/"><img src="https://img.shields.io/pypi/pyversions/lanaudio?color=3ef2ff" alt="Python versions"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-a06cff" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/audio-24--bit%20lossless-39ff14" alt="24-bit lossless">
-  <a href="https://github.com/YOUR-GITHUB-USER/lan-audio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd166" alt="MIT license"></a>
+  <a href="https://github.com/YOUR-GITHUB-USER/lan_audio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd166" alt="MIT license"></a>
 </p>
 
 ---
 
 ## Table of contents
 
-1. What is lan-audio?
+1. What is lan_audio?
 2. Features
 3. Screenshots
 4. Requirements
@@ -37,9 +37,9 @@
 
 ---
 
-## What is lan-audio?
+## What is lan_audio?
 
-**lan-audio** turns any Windows PC into a tiny radio station for your local network.
+**lan_audio** turns any Windows PC into a tiny radio station for your local network.
 Whatever plays on the host (Spotify, YouTube, a game, a meeting) is captured straight from
 the speakers, sent losslessly over your LAN, and played on every member's PC **at the same
 moment**, with sync between members measured to within about a millisecond.
@@ -71,32 +71,32 @@ lanaudio join office
 ### The agent (`lanaudio serve`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/serve.png" alt="lanaudio serve: animated agent screen" width="820">
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/serve.png" alt="lanaudio serve: animated agent screen" width="820">
 </p>
 
 ### Host dashboard (`lanaudio room start office`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/host.png" alt="Host dashboard with members, headroom, gaps and a knock request" width="820">
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/host.png" alt="Host dashboard with members, headroom, gaps and a knock request" width="820">
 </p>
 
 ### Listener dashboard (`lanaudio join office`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/listen.png" alt="Listener dashboard with buffer, sync and devices" width="820">
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/listen.png" alt="Listener dashboard with buffer, sync and devices" width="820">
 </p>
 
 ### Passes and groups
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/token.png" alt="A member pass created by group add" width="720"><br><br>
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/groups.png" alt="lanaudio groups: which groups you are in and which are live" width="720">
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/token.png" alt="A member pass created by group add" width="720"><br><br>
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/groups.png" alt="lanaudio groups: which groups you are in and which are live" width="720">
 </p>
 
 ### Diagnostics (`lanaudio doctor`)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan-audio/main/docs/doctor.png" alt="lanaudio doctor checklist with fixes" width="820">
+  <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USER/lan_audio/main/docs/doctor.png" alt="lanaudio doctor checklist with fixes" width="820">
 </p>
 
 ## Requirements
@@ -106,7 +106,7 @@ lanaudio join office
 | **OS** | Windows 10 or 11. Audio capture uses WASAPI loopback. |
 | **Python** | 3.9 or newer |
 | **Network** | All PCs on the same LAN. Ethernet is best; Wi-Fi works with the auto buffer. |
-| **Version** | Every PC in a room must run the **same version** of lan-audio. |
+| **Version** | Every PC in a room must run the **same version** of lan_audio. |
 
 Dependencies are installed automatically: `numpy`, `rich` and, on Windows, `PyAudioWPatch`.
 
@@ -516,7 +516,7 @@ netsh advfirewall firewall add rule name="lanaudio" dir=in action=allow protocol
 - Passes are per person and per group. They're checked with an HMAC challenge, so the secret never crosses the network.
 - Removing someone from a group revokes their pass at once.
 - Guests without a pass must be approved by the host every session.
-- Audio is not encrypted. Use lan-audio on networks you trust.
+- Audio is not encrypted. Use lan_audio on networks you trust.
 
 > On office networks, IT may block traffic between client PCs. If `lanaudio ping` fails while both agents are running, ask IT to allow TCP 47800 between the PCs.
 
@@ -547,7 +547,7 @@ It holds your name, your groups and their passes (host), your saved passes (memb
 | `token revoked` | The host removed you. Ask them for a new pass. |
 | `You don't have a token for 'office'` | Run `lanaudio token add <TOKEN>` first, or knock with `lanaudio join <host-ip>`. |
 | Gaps keep rising | Use Ethernet. Set the Wi-Fi adapter's power saving to *Maximum Performance*. Avoid the *Power saver* plan. Or raise the buffer: `lanaudio room latency 800`. |
-| Silence, but connected | Play something on the host. lan-audio captures the host's **Windows default output**; if you change it, stop and start the room. |
+| Silence, but connected | Play something on the host. lan_audio captures the host's **Windows default output**; if you change it, stop and start the room. |
 | One device is out of sync | Use `--offset NAME=MS` for that device when joining. |
 | Versions differ | `lanaudio ping <host-ip>` shows both versions. Upgrade with `pip install -U lanaudio` on every PC. |
 | Messy characters in old consoles | Use Windows Terminal, or add `--no-anim`. |
@@ -570,6 +570,6 @@ No. The host's speakers play live; only members are delayed by the buffer.
 
 ## License
 
-MIT. See [LICENSE](https://github.com/YOUR-GITHUB-USER/lan-audio/blob/main/LICENSE).
+MIT. See [LICENSE](https://github.com/YOUR-GITHUB-USER/lan_audio/blob/main/LICENSE).
 
 <p align="center"><i>Lossless audio, flawless attitude.</i></p>
